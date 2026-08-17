@@ -28,7 +28,7 @@ const Navbar = () => {
     <header className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container flex items-center justify-between">
         <Link to="/" className="brand flex items-center gap-2">
-          <img src={isScrolled ? "/logo.png" : "/logo-white.png"} alt="Zyra Logo" className="brand-logo" />
+          <img src={isScrolled ? `${import.meta.env.BASE_URL}logo.png` : `${import.meta.env.BASE_URL}logo-white.png`} alt="Zyra Logo" className="brand-logo" />
         </Link>
 
         {/* Desktop Nav */}

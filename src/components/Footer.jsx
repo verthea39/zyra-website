@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="container grid grid-cols-4 gap-8">
         <div className="footer-brand flex flex-col gap-4">
           <Link to="/" className="flex items-center gap-2">
-            <img src="/logo-white.png" alt="Zyra Logo" className="footer-logo" />
+            <img src={`${import.meta.env.BASE_URL}logo-white.png`} alt="Zyra Logo" className="footer-logo" />
           </Link>
           <p className="text-secondary mb-4">
             Your trusted partner for all corporate and individual documentation services in the UAE. 
