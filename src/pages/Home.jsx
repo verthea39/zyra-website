@@ -8,14 +8,14 @@ const Home = () => {
     <div className="home-page">
       {/* Hero Section */}
       {/* Hero Section */}
-      <section className="relative bg-[#070B14] text-white overflow-hidden font-sans pt-24 lg:pt-32">
+      <section className="relative bg-[#070B14] text-white overflow-hidden font-sans pt-24 lg:pt-32 pb-24 lg:pb-32">
         {/* Background Decorative Gradients & Grid */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b12_1px,transparent_1px),linear-gradient(to_bottom,#1e293b12_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
         <div className="absolute top-0 right-1/4 -z-10 h-[400px] w-[600px] rounded-full bg-amber-500/10 blur-[130px]" />
         <div className="absolute top-1/3 left-1/4 -z-10 h-[350px] w-[500px] rounded-full bg-blue-600/10 blur-[140px]" />
 
         {/* Hero Content */}
-        <div className="relative max-w-7xl mx-auto px-6 pt-16 pb-24 lg:pt-24 lg:pb-32">
+        <div className="relative max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             
             {/* Left Column: Copy & Actions */}
