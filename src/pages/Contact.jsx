@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Send, MessageCircle } from 'lucide-react';
+import { supabase } from '../lib/supabaseClient';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,15 +10,43 @@ const Contact = () => {
     message: ''
   });
 
+  const [status, setStatus] = useState({ loading: false, error: null, success: false });
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    setStatus({ ...status, error: null, success: false });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Simulate form submission
-    alert('Thank you for your message! Our team will contact you shortly.');
-    setFormData({ name: '', email: '', phone: '', message: '' });
+    setStatus({ loading: true, error: null, success: false });
+
+    try {
+      const { data, error } = await supabase
+        .from('contacts')
+        .insert([
+          { 
+            name: formData.name, 
+            email: formData.email, 
+            phone: formData.phone, 
+            message: formData.message 
+          }
+        ]);
+
+      if (error) throw error;
+
+      setStatus({ loading: false, error: null, success: true });
+      setFormData({ name: '', email: '', phone: '', message: '' });
+      
+      // Clear success message after 5 seconds
+      setTimeout(() => {
+        setStatus(prev => ({ ...prev, success: false }));
+      }, 5000);
+      
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setStatus({ loading: false, error: error.message || 'Something went wrong. Please try again.', success: false });
+    }
   };
 
   return (
@@ -135,9 +164,20 @@ const Contact = () => {
                   placeholder="How can we help you today?"
                 ></textarea>
               </div>
-              <button type="submit" className="btn btn-primary mt-2">
-                Send Message <Send size={18} />
+              <button type="submit" className="btn btn-primary mt-2" disabled={status.loading}>
+                {status.loading ? 'Sending...' : 'Send Message'} <Send size={18} />
               </button>
+              
+              {status.success && (
+                <div className="p-4 mt-2 bg-green-100 text-green-700 rounded-md">
+                  Thank you for your message! Our team will contact you shortly.
+                </div>
+              )}
+              {status.error && (
+                <div className="p-4 mt-2 bg-red-100 text-red-700 rounded-md">
+                  {status.error}
+                </div>
+              )}
             </form>
           </div>
         </div>

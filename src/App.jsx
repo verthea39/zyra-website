@@ -17,7 +17,7 @@ const ScrollToTop = () => {
 
 function App() {
   return (
-    <Router basename={import.meta.env.BASE_URL}>
+    <Router>
       <ScrollToTop />
       <div className="app-container flex flex-col min-h-screen">
         <Navbar />

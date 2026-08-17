@@ -30,7 +30,7 @@
   font-weight: 500;
   color: var(--text-primary);
   position: relative;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .navbar:not(.scrolled) .nav-link,
