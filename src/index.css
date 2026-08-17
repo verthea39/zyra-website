@@ -216,3 +216,50 @@ ul {
   background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.15) 0%, transparent 40%);
   pointer-events: none;
 }
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0;
+  }
+  
+  .grid-cols-2, .grid-cols-3, .grid-cols-4 {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .hero-gradient {
+    text-align: center;
+    padding-top: 8rem;
+  }
+  
+  .hero-gradient .flex {
+    justify-content: center;
+  }
+  
+  /* Fix Contact Form grid */
+  .contact-page .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-page .form-group .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Fix Home page Popular Services header */
+  .section .flex.justify-between {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Reset navbar to keep it row */
+  .navbar .flex.justify-between {
+    flex-direction: row;
+  }
+}
