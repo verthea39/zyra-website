@@ -65,7 +65,7 @@ const Navbar = () => {
             </Link>
             
             <button 
-              className="md:hidden text-slate-300 hover:text-white"
+              className="md:hidden text-slate-300 hover:text-white p-2 -mr-2 flex items-center justify-center min-h-[44px] min-w-[44px]"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -75,29 +75,31 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <div className={`md:hidden absolute top-full left-0 w-full bg-[#070B14]/95 backdrop-blur-xl border-b border-slate-800/60 transition-all duration-300 ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
-        <div className="px-6 py-6 flex flex-col gap-4">
-          <ul className="flex flex-col gap-4">
-            {navLinks.map((link) => (
-              <li key={link.path}>
-                <Link 
-                  to={link.path} 
-                  className={`block font-medium text-lg ${isActive(link.path) ? 'text-amber-400' : 'text-slate-300 hover:text-white'}`}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <Link 
-            to="/contact" 
-            className="mt-4 inline-flex items-center justify-center w-full px-6 py-3 rounded-lg font-semibold text-slate-950 bg-amber-400 hover:bg-amber-300 transition-colors"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            Get a Quote
-          </Link>
+      {/* Mobile Menu Overlay */}
+      <div className={`md:hidden fixed inset-0 top-20 z-40 bg-[#070B14]/98 backdrop-blur-2xl transition-all duration-300 overflow-y-auto ${isMobileMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'}`}>
+        <div className="px-6 py-10 flex flex-col gap-6 min-h-[calc(100vh-5rem)]">
+          {navLinks.map((link) => (
+            <Link 
+              key={link.path}
+              to={link.path} 
+              className={`text-2xl font-semibold tracking-tight transition-colors ${isActive(link.path) ? 'text-amber-400' : 'text-slate-200 hover:text-white'}`}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {link.name}
+            </Link>
+          ))}
+          <div className="mt-auto pt-8 border-t border-slate-800/60 pb-8">
+            <Link 
+              to="/contact" 
+              className="flex items-center justify-center w-full px-6 py-4 rounded-xl font-bold text-lg text-slate-950 bg-amber-400 hover:bg-amber-300 transition-colors shadow-lg shadow-amber-500/20"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Get a Quote
+            </Link>
+            <p className="text-center text-sm text-slate-500 mt-4">
+              Available 24/7 for expert assistance.
+            </p>
+          </div>
         </div>
       </div>
     </header>
