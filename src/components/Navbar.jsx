@@ -37,38 +37,41 @@ const Navbar = () => {
           </span>
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
-          <ul className="flex items-center gap-8">
-            {navLinks.map((link) => (
-              <li key={link.path}>
-                <Link 
-                  to={link.path} 
-                  className={`font-medium transition-colors ${isActive(link.path) ? 'text-amber-400' : 'text-slate-300 hover:text-white'}`}
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        {/* Right Side: Nav & CTA */}
+        <div className="flex items-center gap-8">
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex items-center gap-8">
+            <ul className="flex items-center gap-8">
+              {navLinks.map((link) => (
+                <li key={link.path}>
+                  <Link 
+                    to={link.path} 
+                    className={`font-medium transition-colors ${isActive(link.path) ? 'text-amber-400' : 'text-slate-300 hover:text-white'}`}
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
-        {/* CTA Button & Mobile Toggle */}
-        <div className="flex items-center gap-4">
-          <Link 
-            to="/contact" 
-            className="hidden md:inline-flex items-center justify-center px-6 py-2.5 rounded-lg font-semibold text-slate-950 bg-amber-400 hover:bg-amber-300 transition-colors shadow-md shadow-amber-500/20"
-          >
-            Get a Quote
-          </Link>
-          
-          <button 
-            className="md:hidden text-slate-300 hover:text-white"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+          {/* CTA Button & Mobile Toggle */}
+          <div className="flex items-center gap-4">
+            <Link 
+              to="/contact" 
+              className="hidden md:inline-flex items-center justify-center px-6 py-2.5 rounded-lg font-semibold text-slate-950 bg-amber-400 hover:bg-amber-300 transition-colors shadow-md shadow-amber-500/20"
+            >
+              Get a Quote
+            </Link>
+            
+            <button 
+              className="md:hidden text-slate-300 hover:text-white"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
         </div>
       </div>
 
