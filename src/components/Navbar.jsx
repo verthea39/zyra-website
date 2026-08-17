@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, FileText } from 'lucide-react';
-import './Navbar.css';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,54 +18,69 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/services' },
+    { name: 'About Us', path: '/about' },
     { name: 'Contact', path: '/contact' }
   ];
 
   const isActive = (path) => location.pathname === path;
 
   return (
-    <header className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="container flex items-center justify-between">
-        <Link to="/" className="brand flex items-center gap-2">
-          <img src={isScrolled ? `${import.meta.env.BASE_URL}logo.png` : `${import.meta.env.BASE_URL}logo-white.png`} alt="Zyra Logo" className="brand-logo" />
+    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#070B14]/90 backdrop-blur-xl border-b border-slate-800/60 shadow-lg' : 'bg-transparent'}`}>
+      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-2 group">
+          <div className="h-9 w-9 rounded-lg bg-gradient-to-tr from-amber-500 to-amber-300 flex items-center justify-center font-bold text-slate-950 text-xl shadow-md shadow-amber-500/20 group-hover:shadow-amber-500/40 transition-shadow">
+            Z
+          </div>
+          <span className="text-xl font-bold tracking-tight text-white">
+            ZYRA<span className="text-amber-400">.</span>
+          </span>
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="desktop-nav flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-8">
           <ul className="flex items-center gap-8">
             {navLinks.map((link) => (
               <li key={link.path}>
                 <Link 
                   to={link.path} 
-                  className={`nav-link ${isActive(link.path) ? 'active' : ''}`}
+                  className={`font-medium transition-colors ${isActive(link.path) ? 'text-amber-400' : 'text-slate-300 hover:text-white'}`}
                 >
                   {link.name}
                 </Link>
               </li>
             ))}
           </ul>
-          <Link to="/contact" className="btn btn-primary">Get a Quote</Link>
         </nav>
 
-        {/* Mobile Nav Toggle */}
-        <button 
-          className="mobile-toggle"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        {/* CTA Button & Mobile Toggle */}
+        <div className="flex items-center gap-4">
+          <Link 
+            to="/contact" 
+            className="hidden md:inline-flex items-center justify-center px-6 py-2.5 rounded-lg font-semibold text-slate-950 bg-amber-400 hover:bg-amber-300 transition-colors shadow-md shadow-amber-500/20"
+          >
+            Get a Quote
+          </Link>
+          
+          <button 
+            className="md:hidden text-slate-300 hover:text-white"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
-      <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
-        <div className="container flex flex-col gap-4">
+      <div className={`md:hidden absolute top-full left-0 w-full bg-[#070B14]/95 backdrop-blur-xl border-b border-slate-800/60 transition-all duration-300 ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
+        <div className="px-6 py-6 flex flex-col gap-4">
           <ul className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <li key={link.path}>
                 <Link 
                   to={link.path} 
-                  className={`nav-link ${isActive(link.path) ? 'active' : ''}`}
+                  className={`block font-medium text-lg ${isActive(link.path) ? 'text-amber-400' : 'text-slate-300 hover:text-white'}`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
@@ -76,7 +90,7 @@ const Navbar = () => {
           </ul>
           <Link 
             to="/contact" 
-            className="btn btn-primary text-center mt-4"
+            className="mt-4 inline-flex items-center justify-center w-full px-6 py-3 rounded-lg font-semibold text-slate-950 bg-amber-400 hover:bg-amber-300 transition-colors"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Get a Quote

@@ -29,7 +29,7 @@ const Home = () => {
               {/* Headline */}
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
                 Your Trusted Partner for{' '}
-                <span className="bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 bg-clip-text text-transparent">
+                <span className="text-amber-400">
                   Documentation Services
                 </span>{' '}
                 in the UAE
