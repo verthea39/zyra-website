@@ -8,7 +8,7 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <div className="container grid grid-cols-4 gap-8">
+      <div className="container grid custom-grid-4 gap-8">
         <div className="footer-brand flex flex-col gap-4">
           <Link to="/" className="flex items-center gap-2">
             <img src={`${import.meta.env.BASE_URL}logo-white.png`} alt="Zyra Logo" className="footer-logo" />

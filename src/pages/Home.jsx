@@ -8,7 +8,7 @@ const Home = () => {
     <div className="home-page">
       {/* Hero Section */}
       {/* Hero Section */}
-      <section className="relative bg-[#070B14] text-white overflow-hidden font-sans pt-12">
+      <section className="relative bg-[#070B14] text-white overflow-hidden font-sans pt-24 lg:pt-32">
         {/* Background Decorative Gradients & Grid */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b12_1px,transparent_1px),linear-gradient(to_bottom,#1e293b12_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
         <div className="absolute top-0 right-1/4 -z-10 h-[400px] w-[600px] rounded-full bg-amber-500/10 blur-[130px]" />
@@ -138,7 +138,7 @@ const Home = () => {
             <span className="text-accent font-bold uppercase tracking-wider mb-2 block">Why Choose Us</span>
             <h2 className="heading-2">Excellence in Every Step</h2>
           </div>
-          <div className="grid grid-cols-3 gap-8 mt-8">
+          <div className="grid custom-grid-3 gap-8 mt-8">
             <div className="glass p-8 text-center hover-scale rounded-lg">
               <div className="flex justify-center mb-4 text-accent">
                 <ShieldCheck size={48} />
@@ -174,7 +174,7 @@ const Home = () => {
             </div>
             <Link to="/services" className="btn btn-secondary">View All</Link>
           </div>
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid custom-grid-3 gap-8">
             <ServiceCard 
               icon={<FileSignature size={32} />}
               title="Visa Processing"

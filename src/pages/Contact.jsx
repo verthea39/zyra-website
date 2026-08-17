@@ -59,7 +59,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-12 items-start mt-12">
+        <div className="grid custom-grid-2 gap-12 items-start mt-12">
           {/* Contact Information */}
           <div className="contact-info flex flex-col gap-8 fade-in-up">
             <div className="glass p-8 rounded-lg">
@@ -123,7 +123,7 @@ const Contact = () => {
                   placeholder="John Doe"
                 />
               </div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid custom-grid-2 gap-4">
                 <div className="form-group flex flex-col gap-2">
                   <label htmlFor="email" className="font-medium">Email Address</label>
                   <input 

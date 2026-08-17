@@ -51,7 +51,7 @@ const Services = () => {
       {/* Services Grid */}
       <section className="section pt-0">
         <div className="container">
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid custom-grid-3 gap-8">
             {allServices.map((service, index) => (
               <div className={`fade-in-up delay-${(index % 3) * 100}`} key={index}>
                 <ServiceCard 
