@@ -19,7 +19,7 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             
             {/* Left Column: Copy & Actions */}
-            <div className="lg:col-span-7 space-y-8">
+            <div className="lg:col-span-7 space-y-8 flex flex-col items-center text-center lg:items-start lg:text-left">
               {/* Pill Badge */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-amber-400/20 bg-amber-400/5 text-amber-300 text-xs font-medium tracking-wide">
                 <span className="h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse" />
@@ -41,7 +41,7 @@ const Home = () => {
               </p>
 
               {/* Buttons */}
-              <div className="flex flex-wrap items-center gap-4 pt-2">
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
                 <Link to="/services" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-slate-950 bg-gradient-to-r from-amber-400 to-amber-300 hover:from-amber-300 hover:to-amber-200 transition-all duration-200 shadow-md shadow-amber-500/10 group">
                   Explore Services
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
@@ -52,7 +52,7 @@ const Home = () => {
               </div>
 
               {/* Trust Metrics */}
-              <div className="pt-8 border-t border-slate-800/80 grid grid-cols-3 gap-6 max-w-lg">
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 sm:gap-8 pt-6 border-t border-slate-800/60 w-full">
                 <div>
                   <div className="text-2xl lg:text-3xl font-bold text-white tracking-tight">100%</div>
                   <div className="text-xs text-slate-500 mt-1">Hassle-Free Processing</div>
