@@ -8,4 +8,4 @@
 :HL["/_next/static/chunks/274i857e01xka.css","style"]
 :HL["/logo-white.png","image"]
 :HL["https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2000&auhref=format&fit=crop","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4224,"slots":null}}},"staleTime":300,"buildId":"mb4A97Y5gQgoMQ58N0iBx"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4224,"slots":null}}},"staleTime":300,"buildId":"Lwk7w0e4BDZaJyuU70b7Y"}

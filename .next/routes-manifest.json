@@ -1,7 +1,7 @@
 {
   "version": 3,
   "pages404": true,
-  "appType": "hybrid",
+  "appType": "app",
   "caseSensitive": false,
   "basePath": "",
   "redirects": [
@@ -12,6 +12,18 @@
       "priority": true,
       "statusCode": 308,
       "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.zyrabusinesshub.com"
+        }
+      ],
+      "destination": "https://zyrabusinesshub.com/:path*",
+      "statusCode": 308,
+      "regex": "^(?!/_next)(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))?(?:/)?$"
     }
   ],
   "headers": [],
@@ -30,6 +42,12 @@
       "namedRegex": "^/(?:/)?$"
     },
     {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
       "page": "/_not-found",
       "regex": "^/_not\\-found(?:/)?$",
       "routeKeys": {},
@@ -42,16 +60,10 @@
       "namedRegex": "^/contact(?:/)?$"
     },
     {
-      "page": "/Contact",
-      "regex": "^/Contact(?:/)?$",
+      "page": "/robots.txt",
+      "regex": "^/robots\\.txt(?:/)?$",
       "routeKeys": {},
-      "namedRegex": "^/Contact(?:/)?$"
-    },
-    {
-      "page": "/Home",
-      "regex": "^/Home(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/Home(?:/)?$"
+      "namedRegex": "^/robots\\.txt(?:/)?$"
     },
     {
       "page": "/services",
@@ -60,10 +72,10 @@
       "namedRegex": "^/services(?:/)?$"
     },
     {
-      "page": "/Services",
-      "regex": "^/Services(?:/)?$",
+      "page": "/sitemap.xml",
+      "regex": "^/sitemap\\.xml(?:/)?$",
       "routeKeys": {},
-      "namedRegex": "^/Services(?:/)?$"
+      "namedRegex": "^/sitemap\\.xml(?:/)?$"
     }
   ],
   "dataRoutes": [],

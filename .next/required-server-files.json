@@ -11,7 +11,7 @@
     "cleanDistDir": true,
     "assetPrefix": "",
     "cacheMaxMemorySize": 52428800,
-    "configOrigin": "default",
+    "configOrigin": "next.config.js",
     "useFileSystemPublicRoutes": true,
     "generateEtags": true,
     "pageExtensions": [
@@ -233,7 +233,6 @@
       "turbopackInferModuleSideEffects": true,
       "turbopackPluginRuntimeStrategy": "childProcesses",
       "turbopackMemoryEvictionMode": "auto",
-      "middlewarePrefetch": "flexible",
       "optimizePackageImports": [
         "lucide-react",
         "date-fns",
@@ -325,7 +324,20 @@
     "turbopack": {
       "root": "C:\\Users\\lenovo\\Desktop\\Web\\Zyra"
     },
-    "distDirRoot": ".next"
+    "distDirRoot": ".next",
+    "_originalRedirects": [
+      {
+        "source": "/:path*",
+        "has": [
+          {
+            "type": "host",
+            "value": "www.zyrabusinesshub.com"
+          }
+        ],
+        "destination": "https://zyrabusinesshub.com/:path*",
+        "permanent": true
+      }
+    ]
   },
   "appDir": "C:\\Users\\lenovo\\Desktop\\Web\\Zyra",
   "relativeAppDir": "",
