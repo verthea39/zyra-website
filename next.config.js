@@ -7,10 +7,10 @@ const nextConfig = {
         has: [
           {
             type: 'host',
-            value: 'www.zyrabusinesshub.com',
+            value: 'zyrabusinesshub.com',
           },
         ],
-        destination: 'https://zyrabusinesshub.com/:path*',
+        destination: 'https://www.zyrabusinesshub.com/:path*',
         permanent: true,
       },
     ];

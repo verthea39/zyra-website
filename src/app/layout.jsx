@@ -12,17 +12,18 @@ const poppins = Poppins({
 export const metadata = {
   title: 'Zyra Documents Clearance Services | Visa & PRO Services in Deira, Dubai',
   description: 'Document clearance and PRO services in Al Muteena, Deira. UAE visa processing, Emirates ID, MOHRE labour approvals, trade licence and company formation. Written quote before any work begins.',
+  metadataBase: new URL('https://www.zyrabusinesshub.com'),
   alternates: {
-    canonical: 'https://zyrabusinesshub.com',
+    canonical: '/',
   },
   openGraph: {
     title: 'Zyra Documents Clearance Services',
     description: 'Document clearance and PRO services in Al Muteena, Deira. UAE visa processing, Emirates ID, MOHRE labour approvals, trade licence and company formation.',
-    url: 'https://zyrabusinesshub.com',
+    url: 'https://www.zyrabusinesshub.com',
     siteName: 'Zyra Documents Clearance Services',
     images: [
       {
-        url: 'https://zyrabusinesshub.com/og-image.jpg',
+        url: 'https://www.zyrabusinesshub.com/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Zyra Documents Clearance Services',
@@ -35,7 +36,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Zyra Documents Clearance Services',
     description: 'Document clearance and PRO services in Al Muteena, Deira. UAE visa processing, Emirates ID, MOHRE labour approvals, trade licence and company formation.',
-    images: ['https://zyrabusinesshub.com/og-image.jpg'],
+    images: ['https://www.zyrabusinesshub.com/og-image.jpg'],
   },
 };
 
