@@ -17,7 +17,7 @@
 }
 
 .text-secondary {
-  color: #94A3B8;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .footer-links ul {
@@ -25,13 +25,13 @@
 }
 
 .footer-links a {
-  color: #94A3B8;
+  color: rgba(255, 255, 255, 0.9);
   transition: color 0.3s ease, padding-left 0.3s ease;
   display: inline-block;
 }
 
 .footer-links a:hover {
-  color: var(--accent-color);
+  color: white;
   padding-left: 5px;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .social-icon:hover {
-  background: var(--accent-color);
+  background: white;
   color: var(--primary-color);
   transform: translateY(-3px);
 }
@@ -56,13 +56,13 @@
 .footer-bottom {
   margin-top: 4rem;
   padding: 1.5rem 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: #94A3B8;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 0.875rem;
 }
 
 .footer-legal a {
-  color: #94A3B8;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .footer-legal a:hover {
