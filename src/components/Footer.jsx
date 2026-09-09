@@ -18,28 +18,28 @@ const Footer = () => {
             Fast, reliable, and professional.
           </p>
           <div className="social-links flex items-center gap-4">
-            <a href="#" className="social-icon" aria-label="Website"><Globe size={20} /></a>
+            <a href="#" className="social-icon flex items-center justify-center min-w-[44px] min-h-[44px]" aria-label="Website"><Globe size={20} /></a>
           </div>
         </div>
 
         <div className="footer-links">
           <h4 className="footer-heading">Quick Links</h4>
           <ul className="flex flex-col gap-2">
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/about">About Us</Link></li>
-            <li><Link href="/services">Services</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
+            <li><Link href="/" className="block py-2">Home</Link></li>
+            <li><Link href="/about" className="block py-2">About Us</Link></li>
+            <li><Link href="/services" className="block py-2">Services</Link></li>
+            <li><Link href="/contact" className="block py-2">Contact</Link></li>
           </ul>
         </div>
 
         <div className="footer-links">
           <h4 className="footer-heading">Our Services</h4>
           <ul className="flex flex-col gap-2">
-            <li><Link href="/services">Visa Processing</Link></li>
-            <li><Link href="/services">PRO Services</Link></li>
-            <li><Link href="/services">Business Setup</Link></li>
-            <li><Link href="/services">Document Attestation</Link></li>
-            <li><Link href="/services">Emirates ID</Link></li>
+            <li><Link href="/services" className="block py-2">Visa Processing</Link></li>
+            <li><Link href="/services" className="block py-2">PRO Services</Link></li>
+            <li><Link href="/services" className="block py-2">Business Setup</Link></li>
+            <li><Link href="/services" className="block py-2">Document Attestation</Link></li>
+            <li><Link href="/services" className="block py-2">Emirates ID</Link></li>
           </ul>
         </div>
 
@@ -70,7 +70,7 @@ const Footer = () => {
         <div className="container flex items-center justify-between">
           <p>&copy; {currentYear} Zyra Documentation Service. All rights reserved.</p>
           <div className="footer-legal flex gap-4">
-            <a href="#">Privacy Policy</a>
+            <Link href="/privacy-policy">Privacy Policy</Link>
             <a href="#">Terms of Service</a>
           </div>
         </div>

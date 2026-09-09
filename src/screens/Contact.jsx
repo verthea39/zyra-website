@@ -73,7 +73,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-1">Office Location</h4>
-                    <p className="text-secondary">Burj Nahar Mall - Al Muteena, Deira, Dubai</p>
+                    <p className="text-slate-600">Burj Nahar Mall - Al Muteena, Deira, Dubai</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -82,7 +82,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-1">Phone Number</h4>
-                    <p className="text-secondary">+971 54 782 4637<br/>+971 50 722 8583</p>
+                    <p className="text-slate-600">+971 54 782 4637<br/>+971 50 722 8583</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -91,7 +91,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-1">Email Address</h4>
-                    <p className="text-secondary">zyrabusinesshub@gmail.com</p>
+                    <p className="text-slate-600">zyrabusinesshub@gmail.com</p>
                   </div>
                 </div>
               </div>

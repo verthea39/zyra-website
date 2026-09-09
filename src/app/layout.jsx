@@ -1,6 +1,7 @@
 import { Poppins } from 'next/font/google';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import WhatsAppButton from '../components/WhatsAppButton';
 import './globals.css';
 
 const poppins = Poppins({ 
@@ -10,7 +11,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: 'Zyra Documents Clearance Services | Visa & PRO Services in Deira, Dubai',
+  title: 'Visa & PRO Services in Deira, Dubai | Zyra',
   description: 'Document clearance and PRO services in Al Muteena, Deira. UAE visa processing, Emirates ID, MOHRE labour approvals, trade licence and company formation. Written quote before any work begins.',
   metadataBase: new URL('https://www.zyrabusinesshub.com'),
   alternates: {
@@ -50,6 +51,7 @@ export default function RootLayout({ children }) {
             {children}
           </main>
           <Footer />
+          <WhatsAppButton />
         </div>
       </body>
     </html>

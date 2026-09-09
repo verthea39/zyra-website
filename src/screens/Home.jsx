@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { FileSignature, ShieldCheck, Briefcase, Globe, Award, ChevronRight, ArrowRight, CheckCircle2, Clock, FileText } from 'lucide-react';
 import ServiceCard from '../components/ServiceCard';
+import Testimonials from '../components/Testimonials';
 
 const Home = () => {
   return (
@@ -25,7 +26,7 @@ const Home = () => {
         <div className="relative z-10 container flex flex-col items-center text-center">
           
           {/* Pill Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-slate-900/60 backdrop-blur-md text-white text-xs sm:text-sm font-bold tracking-wide mb-8 shadow-2xl">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-slate-900/60 backdrop-blur-md text-white text-sm font-bold tracking-wide mb-8 shadow-2xl">
             <span className="h-1.5 w-1.5 rounded-full bg-[#99692e] animate-pulse" />
             UAE Corporate & PRO Specialists
           </div>
@@ -120,6 +121,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <Testimonials />
 
       {/* CTA Section */}
       <section className="section hero-gradient text-center py-20">

@@ -11,8 +11,8 @@ const ServiceCard = ({ icon, title, description, link = '/services' }) => {
       </div>
       <h3 className="service-title font-bold text-[#0F172A] text-xl sm:text-2xl mt-4">{title}</h3>
       <p className="text-slate-500 text-sm mt-3 mb-6 line-clamp-3">{description}</p>
-      <Link href={link} className="service-link flex items-center gap-2 mt-auto group">
-        <span className="text-[13px] font-bold text-[#0F172A] tracking-wide">Learn More</span>
+      <Link href={link} className="service-link flex items-center gap-2 mt-auto group py-3">
+        <span className="text-[14px] font-bold text-[#0F172A] tracking-wide">Learn More</span>
         <ArrowRight size={16} className="text-[#0F172A] transition-transform group-hover:translate-x-1" />
       </Link>
     </div>

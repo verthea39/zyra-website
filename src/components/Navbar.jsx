@@ -76,6 +76,7 @@ const Navbar = () => {
               className={`md:hidden p-2 -mr-2 flex items-center justify-center min-h-[44px] min-w-[44px] ${isDarkTheme ? 'text-white' : 'text-slate-600 hover:text-slate-900'}`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
+              aria-expanded={isMobileMenuOpen}
             >
               {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -84,7 +85,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div className={`md:hidden fixed inset-0 top-20 z-40 bg-white/98 backdrop-blur-2xl transition-all duration-300 overflow-y-auto ${isMobileMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'}`}>
+      <div className={`md:hidden fixed inset-0 top-20 z-40 bg-white/98 backdrop-blur-2xl transition-all duration-300 overflow-y-auto ${isMobileMenuOpen ? 'opacity-100 block translate-y-0' : 'opacity-0 hidden -translate-y-4'}`}>
         <div className="px-6 py-10 flex flex-col gap-6 min-h-[calc(100vh-5rem)]">
           {navLinks.map((link) => (
             <Link 
