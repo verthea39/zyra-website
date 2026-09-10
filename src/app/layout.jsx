@@ -39,6 +39,11 @@ export const metadata = {
     description: 'Document clearance and PRO services in Al Muteena, Deira. UAE visa processing, Emirates ID, MOHRE labour approvals, trade licence and company formation.',
     images: ['https://www.zyrabusinesshub.com/og-image.jpg'],
   },
+  verification: {
+    other: {
+      'facebook-domain-verification': ['np54b6idbzsoccynwnqsh3h2tz852d'],
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
